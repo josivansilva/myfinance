@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<project name="MyFinance" basedir=".." default="usage">
+    <property file="build.properties"/>
+    <property name="web.dir" value="."/>
+	<property name="app.name" value="MyFinance"/>
+
+    <target name="usage">
+        <echo message=""/>
+        <echo message="${app.name} build file"/>
+        <echo message="-----------------------------------"/>
+        <echo message=""/>
+        <echo message="Available targets are:"/>
+        <echo message=""/>
+    	<echo message="deploy    --> Deploys the PHP web application on the localhost."/>
+		<echo message="undeploy  --> Undeploy the PHP web application."/>
+		<echo message="redeploy  --> Redeploy the PHP web application."/>
+        <echo message=""/>
+    </target>
+	
+	<target name="deploy" description="Deploys the PHP web application on the localhost.">
+	    <!-->mkdir dir="${localhost.app.dir}"/-->
+    	<copy todir="${localhost.app.dir}">
+    	   <fileset dir="${web.dir}" excludes="**/*.svn, **/*.buildpath, **/*.project, **/.settings/**, **/ant/**, **/*.properties"/>
+    	</copy>
+	</target>
+	
+	<target name="undeploy" description="Undeploy the PHP web application.">
+		<delete dir="${localhost.app.dir}"/>
+	</target>
+		
+	<target name="redeploy" depends="undeploy, deploy" description="Redeploy the PHP web application."/>
+	    
+</project>
