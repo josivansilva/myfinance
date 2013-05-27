@@ -16,7 +16,7 @@ abstract class AbstractDAO implements DAOOperations {
 	/**
 	 * Constant that defines the host name.
 	 */
-	const HOST = "mysql.josivansilva.com";
+	const HOST = "localhost";
 	/**
 	 * Constant that defines the port number.
 	 */
@@ -28,7 +28,7 @@ abstract class AbstractDAO implements DAOOperations {
 	/**
 	 * Constant that defines the database user password.
 	 */
-	const DB_PWD  = "j37r15s3882";
+	const DB_PWD  = "123456";
 	/**
 	 * Constant that defines the database name.
 	 */
