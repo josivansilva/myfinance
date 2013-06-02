@@ -1,6 +1,7 @@
 <?php 
 include_once ("/home/josivansilva/webapps/ROOT/MyFinance/classes/vo/UserVO.php");
 include_once ("include/lock.php");
+include_once ("include/lock_admin.php");
 ?>
 <!DOCTYPE html>
 <html>	
